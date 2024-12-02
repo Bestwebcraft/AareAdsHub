@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aare Ads Hub Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Aare Ads Hub Dashboard</h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Left Navigation -->
+            <div class="col-md-3">
+                <nav class="nav flex-column bg-light p-3 rounded">
+                    <a href="#home" class="nav-link text-dark"><i class="fa fa-home me-2"></i> Home</a>
+                    <a href="#profile" class="nav-link text-dark"><i class="fa fa-user me-2"></i> Profile</a>
+                    <a href="#monetization" class="nav-link text-dark"><i class="fa fa-dollar-sign me-2"></i> Monetization</a>
+                    <a href="#notifications" class="nav-link text-dark"><i class="fa fa-bell me-2"></i> Notifications</a>
+                    <a href="#report" class="nav-link text-dark"><i class="fa fa-bug me-2"></i> Report Issue</a>
+                </nav>
+            </div>
+
+            <!-- Right Content -->
+            <div class="col-md-9">
+                <!-- Dashboard Widgets -->
+                <div class="row text-center">
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-primary shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Balance</h5>
+                                <p class="card-text fs-4">$150.00</p>
+                                <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#transferModal">
+                                    Transfer Balance
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-success shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Monetization</h5>
+                                <p class="card-text fs-4">Active</p>
+                                <button class="btn btn-success w-100">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-warning shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Clicks Today</h5>
+                                <p class="card-text fs-4">25 / 50</p>
+                                <button class="btn btn-warning w-100">View History</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Transfer Balance Modal -->
+    <div class="modal fade" id="transferModal" tabindex="-1" aria-labelledby="transferModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="transferModalLabel">Transfer Balance</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="balanceForm">
+                        <div class="mb-3">
+                            <label for="recipient" class="form-label">Recipient Username</label>
+                            <input type="text" class="form-control" id="recipient" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="amount" class="form-label">Amount</label>
+                            <input type="number" class="form-control" id="amount" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Transfer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
